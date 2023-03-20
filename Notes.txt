@@ -1,0 +1,38 @@
+a short adventure game to enter the 55th cbcs
+airman arrives for first UTA
+they get to the parking lot but the door is locked
+Their phone vobrate saand tthey see a whatsapp alert from MSgt Osbourne to get to the back bay ASAP
+Get to the back bay without running int othe commander
+at door
+- go left (53ATCS)
+-straight (locked door)
+
+-right(Soldier jumps out of dumpster)
+
+____________
+# combat system
+# clone the 'type' concept like pokemon
+# character gets easirer or harder questions depending on type
+# -perhaps trivia
+# unit trivia
+# AF trivia
+# uniform policy standards
+# Creating a Dictionary
+# with dict() method
+# Dict = dict({1: 'Geeks', 2: 'For', 3: 'Geeks'})
+# print("\nDictionary with the use of dict(): ")
+# print(Dict)
+
+# Creating a Dictionary
+# with each item as a Pair
+# Dict = dict([(1, 'Geeks'), (2, 'For')])
+# print("\nDictionary with each item as a pair: ")
+# print(Dict)
+
+# Creating a Nested Dictionary
+# as shown in the below image
+Dict = {1: 'Geeks', 2: 'For',
+        3: {'A': 'Welcome', 'B': 'To', 'C': 'Geeks'}}
+# print_question(unit_question[1].values())
+
+# print(unit_question[1]['Q'])
