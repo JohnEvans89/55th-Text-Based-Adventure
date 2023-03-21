@@ -1,9 +1,9 @@
 from tkinter import *
 
-root=Tk()
-root.title("Python Adventure")
+# root=Tk()
+# root.title("Python Adventure")
 
-root.geometry()
+# root.geometry()
 #
 #
 #

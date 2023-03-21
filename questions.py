@@ -31,4 +31,6 @@ def ask_question(q):
 
 
 ask_question(1)
-ask_question(2)
+# ask_question(2)
+
+# print_question(2)

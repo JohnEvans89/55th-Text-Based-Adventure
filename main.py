@@ -54,5 +54,5 @@ def car_to_door():
 
 if __name__ == '__main__':
     greeting()
-    # name = pick_name()
-    # car_to_door()
+    name = pick_name()
+    car_to_door()

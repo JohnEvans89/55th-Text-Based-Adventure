@@ -1,4 +1,4 @@
-from Character.enemy import *
+from Character.Enemy import *
 
 from Character.Player import *
 
