@@ -34,7 +34,7 @@ print("Start guessing...")
 time.sleep(0.5)
 
 #here we set the secret. You can select any word to play with.
-word = ("secret r")
+word = ("FLY FIGHT WIN")
 
 #creates an variable with an empty value
 guesses = ''
@@ -54,15 +54,17 @@ while turns > 0:
   for char in word:
 
     # see if the character is in the players guess
-    if char in guesses:
+    if char in guesses.upper():
 
       # print then out the character
       print(char, end=""),
-
+    elif char == ' ':
+      print(char)
     else:
 
       # if not found, print a dash
-      print("_", end=""),
+
+      print("_", end="")
 
       # and increase the failed counter with one
       failed += 1
