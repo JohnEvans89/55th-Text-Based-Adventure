@@ -22,80 +22,86 @@
 #importing the time module
 import time
 
-#welcoming the user
-name = input("What is your name? ")
 
-print("Hello, " + name, "Time to play hangman!")
+def dumpster():
+  #welcoming the user
+  name = input("What is your name? ")
 
-#wait for 1 second
-time.sleep(1)
+  print("Hello, " + name, "Time to play hangman!")
 
-print("Start guessing...")
-time.sleep(0.5)
+  #wait for 1 second
+  time.sleep(1)
 
-#here we set the secret. You can select any word to play with.
-word = ("FLY FIGHT WIN")
+  print("Start guessing...")
+  time.sleep(0.5)
 
-#creates an variable with an empty value
-guesses = ''
+  #here we set the secret. You can select any word to play with.
+  word = ("FLY FIGHT WIN")
 
-#determine the number of turns
-turns = 10
+  #creates an variable with an empty value
+  guesses = ''
 
-# Create a while loop
+  #determine the number of turns
+  turns = 5
 
-#check if the turns are more than zero
-while turns > 0:
+  # Create a while loop
 
-  # make a counter that starts with zero
-  failed = 0
+  #check if the turns are more than zero
+  while turns > 0:
 
-  # for every character in secret_word
-  for char in word:
+    # make a counter that starts with zero
+    failed = 0
 
-    # see if the character is in the players guess
-    if char in guesses.upper():
+    # for every character in secret_word
+    for char in word:
 
-      # print then out the character
-      print(char, end=""),
-    elif char == ' ':
-      print(char)
-    else:
+      # see if the character is in the players guess
+      if char in guesses.upper():
 
-      # if not found, print a dash
+        # print then out the character
+        print(char, end=""),
+      elif char == ' ':
+        print(char)
+      else:
 
-      print("_", end="")
+        # if not found, print a dash
 
-      # and increase the failed counter with one
-      failed += 1
+        print("_", end="")
 
-  # if failed is equal to zero
+        # and increase the failed counter with one
+        failed += 1
 
-  # print You Won
-  if failed == 0:
-    print("You won")
-    # exit the script
-    break
-  # ask the user go guess a character
-  guess = input("\nguess a character:")
+    # if failed is equal to zero
 
-  # set the players guess to guesses
-  guesses += guess
+    # print You Won
+    if failed == 0:
+      print("You won")
+      # exit the script
+      break
+    # ask the user go guess a character
+    guess = input("\nguess a character:")
 
-  # if the guess is not found in the secret word
-  if guess not in word:
+    # set the players guess to guesses
+    guesses += guess
 
-    # turns counter decreases with 1 (now 9)
-    turns -= 1
+    # if the guess is not found in the secret word
+    if guess.upper() not in word:
 
-    # print wrong
-    print("Wrong")
+      # turns counter decreases with 1 (now 9)
+      turns -= 1
 
-    # how many turns are left
-    print("You have", +turns, 'more guesses')
+      # print wrong
+      print("Wrong")
 
-    # if the turns are equal to zero
-    if turns == 0:
+      # how many turns are left
+      print("You have", +turns, 'more guesses')
 
-      # print "You Lose"
-      print("You Lose")
+      # if the turns are equal to zero
+      if turns == 0:
+
+        # print "You Lose"
+        print("You Lose")
+
+
+
+dumpster()
