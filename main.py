@@ -1,7 +1,4 @@
-from methods import *
-
-name = 'popo'
-
+from Airman import *
 
 def greeting():
     prCyan("―" * 30)
@@ -42,9 +39,10 @@ def cross_roads(N, S, E, W):
 
 def car_to_door():
     straight_line()
+    # if i
     print(
         'You walk from your car and notice\nthat the parking lot is already full.\nYou walk up to the doors of the building and try to open the door.\n\nOH NO!!!!!\nTHE DOOR IS LOCKED!!!!!\n\nYour phone rings, it\'s MSgt. Osbourne:\n\t"Airman',
-        name,
+        play.name,
         'where are you?"\n\t"Morning formation is about to occur. Get in here!"')
 
 
@@ -54,7 +52,7 @@ def car_to_door():
 
 if __name__ == '__main__':
     greeting()
-    name = pick_name()
+    play.name = pick_name()
     car_to_door()
 
 

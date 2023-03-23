@@ -19,21 +19,16 @@
 # print(puzzle_2)
 # print('H'in puzzle_2_answer)
 
+# #wait for 1 second
+# time.sleep(1)
+
+# print("Start guessing...")
+# time.sleep(0.5)
 #importing the time module
 import time
 
 
 def dumpster():
-  #welcoming the user
-  name = input("What is your name? ")
-
-  print("Hello, " + name, "Time to play hangman!")
-
-  #wait for 1 second
-  time.sleep(1)
-
-  print("Start guessing...")
-  time.sleep(0.5)
 
   #here we set the secret. You can select any word to play with.
   word = ("FLY FIGHT WIN")
@@ -101,7 +96,6 @@ def dumpster():
 
         # print "You Lose"
         print("You Lose")
-
 
 
 dumpster()
