@@ -73,7 +73,7 @@ while turns > 0:
 
   # print You Won
   if failed == 0:
-    print("You won")
+    print("\nYou won")
     # exit the script
     break
   # ask the user go guess a character
