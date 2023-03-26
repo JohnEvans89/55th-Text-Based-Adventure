@@ -22,4 +22,4 @@ def add_item(item, count):
     inventory.update({item: count})
 
 
-# play = Airman("Test")
+play = Airman("Test")
