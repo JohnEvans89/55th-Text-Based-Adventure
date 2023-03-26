@@ -34,3 +34,4 @@ def db_ask_question(q):
     print("That's Right!!!")
 
 # load_db()
+db_print_question('q2')

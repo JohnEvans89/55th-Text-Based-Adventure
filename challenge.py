@@ -68,4 +68,4 @@ def dumpster():
         print("You Lose")
 
 
-# dumpster()
+dumpster()
