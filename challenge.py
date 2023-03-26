@@ -1,33 +1,3 @@
-# # this will be the dumpster challenge
-# # you will need to crack the code
-# # A=1, etc. with coded answer
-# # 3 attempts win gets key. Lose, you don't get the key and challenge locks
-
-# # sorta like a hangman game structure
-# # 3 ways to do it
-# # -have a dictionary of alphabet and the puzzle and check if the guess matches the puzzle
-# #  /alphabet pair. Return correct letter
-# # -have them solve the puzzle totally and return a true/False
-# # -have the guess and fill in what was right
-# alphabet={1:'A',2:'B',5:'L'}
-
-# puzzle=['A']
-# print(alphabet[1])
-
-# puzzle_2='N______ C__ S___\nT__ U_ A__ F___'
-# puzzle_2_answer='NOTHING CAN STOP\nTHE U.S. AIR FORCE'
-# print(puzzle_2)
-# print('H'in puzzle_2_answer)
-
-# #wait for 1 second
-# time.sleep(1)
-
-# print("Start guessing...")
-# time.sleep(0.5)
-#importing the time module
-import time
-
-
 def dumpster():
 
   #here we set the secret. You can select any word to play with.
@@ -98,4 +68,4 @@ def dumpster():
         print("You Lose")
 
 
-dumpster()
+# dumpster()

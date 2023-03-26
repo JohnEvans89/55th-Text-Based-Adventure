@@ -1,5 +1,4 @@
 import os
-# nnn
 
 
 def straight_line():
