@@ -1,3 +1,6 @@
+https://realpython.com/python-pyqt-gui-calculator/#installing-pyqt
+https://realpython.com/python-contact-book/#step-1-creating-the-contact-books-skeleton-app-with-pyqt
+
 a short adventure game to enter the 55th cbcs
 airman arrives for first UTA
 they get to the parking lot but the door is locked
@@ -17,6 +20,10 @@ ____________
 # unit trivia
 # AF trivia
 # uniform policy standards
+
+_________________________
+_________________________
+Question Dictionary
 # Creating a Dictionary
 # with dict() method
 # Dict = dict({1: 'Geeks', 2: 'For', 3: 'Geeks'})
@@ -36,3 +43,39 @@ Dict = {1: 'Geeks', 2: 'For',
 # print_question(unit_question[1].values())
 
 # print(unit_question[1]['Q'])
+
+_____
+unit_question = {
+  1: {
+    'Question 1': "Who is the 55th CBCS Commander",
+    '1': 'Col. Garrison',
+    '2': 'Lt. Col. Williams',
+    '3': 'Maj. Spikes',
+    '4': 'Capt. Ifan',
+    'Answer': '2'
+  },
+  2: {
+    'Question 2': 'What is our Group?',
+    '1': '338th',
+    '2': '336th',
+    '3': '960th',
+    '4': '860th',
+    'Answer': '4'
+  }
+}
+
+
+# db["1"] = {"key_a": "value_a", "key_b": "value_b"}
+def print_question(q):
+  Q = unit_question[q]
+  for i, j in Q.items():
+    if not i == 'Answer':
+      print(i + ': ' + j)
+  return Q['Answer']
+
+
+def ask_question(q):
+  answer = print_question(q)
+  guess = input('-->')
+  if guess == answer:
+    print("That's Right!!!")
