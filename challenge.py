@@ -1,101 +1,73 @@
-# # this will be the dumpster challenge
-# # you will need to crack the code
-# # A=1, etc. with coded answer
-# # 3 attempts win gets key. Lose, you don't get the key and challenge locks
+from replit import db
 
-# # sorta like a hangman game structure
-# # 3 ways to do it
-# # -have a dictionary of alphabet and the puzzle and check if the guess matches the puzzle
-# #  /alphabet pair. Return correct letter
-# # -have them solve the puzzle totally and return a true/False
-# # -have the guess and fill in what was right
-# alphabet={1:'A',2:'B',5:'L'}
+def dumpster():
 
-# puzzle=['A']
-# print(alphabet[1])
+  #here we set the secret. You can select any word to play with.
+  word = ("FLY FIGHT WIN")
 
-# puzzle_2='N______ C__ S___\nT__ U_ A__ F___'
-# puzzle_2_answer='NOTHING CAN STOP\nTHE U.S. AIR FORCE'
-# print(puzzle_2)
-# print('H'in puzzle_2_answer)
+  #creates an variable with an empty value
+  guesses = ''
 
-#importing the time module
-import time
+  #determine the number of turns
+  turns = 5
 
-#welcoming the user
-name = input("What is your name? ")
+  # Create a while loop
 
-print("Hello, " + name, "Time to play hangman!")
+  #check if the turns are more than zero
+  while turns > 0:
 
-#wait for 1 second
-time.sleep(1)
+    # make a counter that starts with zero
+    failed = 0
 
-print("Start guessing...")
-time.sleep(0.5)
+    # for every character in secret_word
+    for char in word:
 
-#here we set the secret. You can select any word to play with.
-word = ("FLY FIGHT WIN")
+      # see if the character is in the players guess
+      if char in guesses.upper():
 
-#creates an variable with an empty value
-guesses = ''
+        # print then out the character
+        print(char, end=""),
+      elif char == ' ':
+        print(char)
+      else:
 
-#determine the number of turns
-turns = 10
+        # if not found, print a dash
 
-# Create a while loop
+        print("_", end="")
 
-#check if the turns are more than zero
-while turns > 0:
+        # and increase the failed counter with one
+        failed += 1
 
-  # make a counter that starts with zero
-  failed = 0
+    # if failed is equal to zero
 
-  # for every character in secret_word
-  for char in word:
+    # print You Won
+    if failed == 0:
+      print("You won")
+      # exit the script
+      break
+    # ask the user go guess a character
+    guess = input("\nguess a character:")
 
-    # see if the character is in the players guess
-    if char in guesses.upper():
+    # set the players guess to guesses
+    guesses += guess
 
-      # print then out the character
-      print(char, end=""),
-    elif char == ' ':
-      print(char)
-    else:
+    # if the guess is not found in the secret word
+    if guess.upper() not in word:
 
-      # if not found, print a dash
+      # turns counter decreases with 1 (now 9)
+      turns -= 1
 
-      print("_", end="")
+      # print wrong
+      print("Wrong")
 
-      # and increase the failed counter with one
-      failed += 1
+      # how many turns are left
+      print("You have", +turns, 'more guesses')
 
-  # if failed is equal to zero
+      # if the turns are equal to zero
+      if turns == 0:
 
-  # print You Won
-  if failed == 0:
-    print("\nYou won")
-    # exit the script
-    break
-  # ask the user go guess a character
-  guess = input("\nguess a character:")
+        # print "You Lose"
+        print("You Lose")
 
-  # set the players guess to guesses
-  guesses += guess
 
-  # if the guess is not found in the secret word
-  if guess not in word:
-
-    # turns counter decreases with 1 (now 9)
-    turns -= 1
-
-    # print wrong
-    print("Wrong")
-
-    # how many turns are left
-    print("You have", +turns, 'more guesses')
-
-    # if the turns are equal to zero
-    if turns == 0:
-
-      # print "You Lose"
-      print("You Lose")
+# dumpster()
