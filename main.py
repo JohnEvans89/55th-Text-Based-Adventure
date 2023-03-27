@@ -52,9 +52,10 @@ def car_to_door():
 # ------------------------------------------------------#
 
 if __name__ == '__main__':
-    greeting()
+    # greeting()
     # play.name = pick_name()
-    car_to_door()
+    # car_to_door()
+    dumpster()
     db_ask_question("q1")
     
     
