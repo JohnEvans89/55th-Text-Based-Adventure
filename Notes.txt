@@ -1,6 +1,10 @@
 https://realpython.com/python-pyqt-gui-calculator/#installing-pyqt
 https://realpython.com/python-contact-book/#step-1-creating-the-contact-books-skeleton-app-with-pyqt
 
+VENV
+https://realpython.com/python-virtual-environments-a-primer/#how-can-you-manage-your-virtual-environments
+
+
 a short adventure game to enter the 55th cbcs
 airman arrives for first UTA
 they get to the parking lot but the door is locked
