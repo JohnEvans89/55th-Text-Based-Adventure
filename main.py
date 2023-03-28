@@ -70,6 +70,7 @@ def dumpster():
     car_to_door
   else:
     print('You go right, looking for a way into the building.\nAs you near the dumpsters...')
+    press_enter()
     print(soldier,'\nAN ANGRY SOLDIER JUMPS OUT OF THE DUMPSTER!!\n\t"Oh look, a lost Airman"\n\t"I stole the key to your precious unit."\n\t"Play me in hangman for the key or else!"\n\t"You have 5 guesses (HINT:Slogan)"')
     press_enter()
     t=hangman()
@@ -81,7 +82,7 @@ if __name__ == '__main__':
   # greeting()
   # play.name = pick_name()
   # car_to_door()
-  cross_roads("35ATC", dumpster, "5", "y")
+  # cross_roads("35ATC", dumpster, "5", "y")
   dumpster()
   
   # db_ask_question("q1")

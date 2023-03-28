@@ -84,7 +84,7 @@ def hangman():
   
   print()
   #here we set the secret. You can select any word to play with.
-  word = ("FLY FIGHT WIN")
+  word = ("FLY")
 
   #creates an variable with an empty value
   guesses = ''
@@ -108,8 +108,8 @@ def hangman():
 
         # print then out the character
         print(char, end=""),
-      elif char == ' ':
-        print(char)
+      # elif char == ' ':
+      #   print('\n')
       else:
 
         # if not found, print a dash
