@@ -81,6 +81,7 @@ def ask_question(q):
 
 
 def hangman():
+  
   print()
   #here we set the secret. You can select any word to play with.
   word = ("FLY FIGHT WIN")
@@ -123,6 +124,7 @@ def hangman():
     # print You Won
     if failed == 0:
       print("You won")
+      return True
       # exit the script
       break
     # ask the user go guess a character
@@ -148,6 +150,7 @@ def hangman():
 
         # print "You Lose"
         print("You Lose")
+        return False
 
 
 soldier='''                 

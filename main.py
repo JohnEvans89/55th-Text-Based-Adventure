@@ -16,7 +16,7 @@ def greeting():
   prCyan("―" * 30)
   print(" * " * 10)
   prCyan("―" * 30)
-  press_enter(["key"])
+  press_enter()
 
 
 def pick_name():
@@ -50,6 +50,7 @@ def car_to_door():
       'You walk from your car and notice\nthat the parking lot is already full.\nYou walk up to the doors of the building and try to open the door.\n\nOH NO!!!!!\nTHE DOOR IS LOCKED!!!!!\n\nYour phone rings, it\'s MSgt. Osbourne:\n\t"Airman',
       play.name,
       'where are you?"\n\t"Morning formation is about to occur. Get in here!"')
+    press_enter()
     # cross_roads()
   else:
     print("The key unlocked the door\nYou enter the building")
@@ -62,7 +63,7 @@ def car_to_door():
 
 
 def dumpster():
-  # straight_line()
+  straight_line()
   if not inventory["key"] == 0:
     print("The soldier has left. Head towards the buiding")
     press_enter()
@@ -71,7 +72,8 @@ def dumpster():
     print('You go right, looking for a way into the building.\nAs you near the dumpsters...')
     print(soldier,'\nAN ANGRY SOLDIER JUMPS OUT OF THE DUMPSTER!!\n\t"Oh look, a lost Airman"\n\t"I stole the key to your precious unit."\n\t"Play me in hangman for the key or else!"\n\t"You have 5 guesses (HINT:Slogan)"')
     press_enter()
-    hangman()
+    t=hangman()
+    print(t)
     
     
     
@@ -79,6 +81,8 @@ if __name__ == '__main__':
   # greeting()
   # play.name = pick_name()
   # car_to_door()
+  cross_roads("35ATC", dumpster, "5", "y")
   dumpster()
+  
   # db_ask_question("q1")
-  # cross_roads("35ATC", dumpster, "5", "y")
+  
