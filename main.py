@@ -1,4 +1,3 @@
-from Airman import *
 from challenge import *
 
 
@@ -34,8 +33,9 @@ def pick_name():
 def cross_roads(left, right, forward, back):
   straight_line()
   print(f"1.Left\n2.Right\n3.Forward\n4.Back")
-  print("1.Left",left,'\n2.Right', str(right),'\n3.Forward',forward,'\n4.Back',back)
-  
+  print("1.Left", left, '\n2.Right', str(right), '\n3.Forward', forward,
+        '\n4.Back', back)
+
   choice = input("Where do you want to go?\n")
   if choice == '2':
     right()
@@ -59,10 +59,26 @@ def car_to_door():
 # ------------------------------------------------------#
 # ------------------------------------------------------#
 
+
+
+def dumpster():
+  # straight_line()
+  if not inventory["key"] == 0:
+    print("The soldier has left. Head towards the buiding")
+    press_enter()
+    car_to_door
+  else:
+    print('You go right, looking for a way into the building.\nAs you near the dumpsters...')
+    print(soldier,'\nAN ANGRY SOLDIER JUMPS OUT OF THE DUMPSTER!!\n\t"Oh look, a lost Airman"\n\t"I stole the key to your precious unit."\n\t"Play me in hangman for the key or else!"\n\t"You have 5 guesses (HINT:Slogan)"')
+    press_enter()
+    hangman()
+    
+    
+    
 if __name__ == '__main__':
   # greeting()
   # play.name = pick_name()
   # car_to_door()
-  # dumpster()
+  dumpster()
   # db_ask_question("q1")
-  cross_roads("35ATC", dumpster, "5", "y")
+  # cross_roads("35ATC", dumpster, "5", "y")

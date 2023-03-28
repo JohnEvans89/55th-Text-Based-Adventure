@@ -1,4 +1,6 @@
 from replit import db
+from Airman import *
+
 
 # ____
 # DB
@@ -12,7 +14,7 @@ def load_db():
     '4': 'Capt. Ifan',
     'Answer': '2'
   }
-  
+
   db["q2"] = {
     'Question 2': 'What is our Group?',
     '1': '338th',
@@ -35,44 +37,51 @@ def db_ask_question(q):
   guess = input('-->')
   if guess == answer:
     print("That's Right!!!")
-# load_db()
+
 
 # ____
 # Local Dict
 # ____
-# unit_question = {1: {'Question 1': "Who is the 55th CBCS Commander",
-#                      '1': 'Col. Garrison',
-#                      '2': 'Lt. Col. Williams',
-#                      '3': 'Maj. Spikes',
-#                      '4': 'Capt. Ifan',
-#                      'Answer': '2'},
-#                  2: {'Question 2': 'What is our Group?',
-#                      '1': '338th',
-#                      '2': '336th',
-#                      '3': '960th',
-#                      '4': '860th',
-#                      'Answer': '4'}
 
-#                  }
-
-
-# def print_question(q):
-#     Q = unit_question[q]
-#     for i, j in Q.items():
-#         if not i == 'Answer':
-#             print(i + ': ' + j)
-#     return Q['Answer']
-
-
-# def ask_question(q):
-#     answer = print_question(q)
-#     guess = input('-->')
-#     if guess == answer:
-#         print("That's Right!!!")
+unit_question = {
+  1: {
+    'Question 1': "Who is the 55th CBCS Commander",
+    '1': 'Col. Garrison',
+    '2': 'Lt. Col. Williams',
+    '3': 'Maj. Spikes',
+    '4': 'Capt. Ifan',
+    'Answer': '2'
+  },
+  2: {
+    'Question 2': 'What is our Group?',
+    '1': '338th',
+    '2': '336th',
+    '3': '960th',
+    '4': '860th',
+    'Answer': '4'
+  }
+}
+def print_question(q):
+  Q = unit_question[q]
+  for i, j in Q.items():
+    if not i == 'Answer':
+      print(i + ': ' + j)
+  return Q['Answer']
 
 
-def dumpster():
+def ask_question(q):
+  answer = print_question(q)
+  guess = input('-->')
+  if guess == answer:
+    print("That's Right!!!")
 
+
+
+
+
+
+def hangman():
+  print()
   #here we set the secret. You can select any word to play with.
   word = ("FLY FIGHT WIN")
 
@@ -141,4 +150,21 @@ def dumpster():
         print("You Lose")
 
 
-# dumpster()
+soldier='''                 
+                 ,#####,
+                 #_   _#
+                 |a` `a|
+                 |  u  |
+                 \  =  /
+                 |\___/|
+        ___ ____/:     :\____ ___
+      .'   `.-===-\   /-===-.`   '.
+     /      .-"""""-.-"""""-.      \\
+    /'           A R M Y           '\\
+  .'  ' .:    o   -=:=-   o    :. '  `.
+  (.'   /'. '-.....-'-.....-' .'\   '.)
+  /' ._/   ".     --:--     ."   \_. '\\
+ |  .'|      ".  ---:---  ."      |'.  |
+ |  : |       |  ---:---  |       | :  |
+  \ : |       |_____._____|  jps  | : /'''
+
