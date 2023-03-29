@@ -43,37 +43,38 @@ def db_ask_question(q):
 # Local Dict
 # ____
 
-unit_question = {
-  1: {
-    'Question 1': "Who is the 55th CBCS Commander",
-    '1': 'Col. Garrison',
-    '2': 'Lt. Col. Williams',
-    '3': 'Maj. Spikes',
-    '4': 'Capt. Ifan',
-    'Answer': '2'
-  },
-  2: {
-    'Question 2': 'What is our Group?',
-    '1': '338th',
-    '2': '336th',
-    '3': '960th',
-    '4': '860th',
-    'Answer': '4'
-  }
-}
-def print_question(q):
-  Q = unit_question[q]
-  for i, j in Q.items():
-    if not i == 'Answer':
-      print(i + ': ' + j)
-  return Q['Answer']
+
+# unit_question = {
+#   1: {
+#     'Question 1': "Who is the 55th CBCS Commander",
+#     '1': 'Col. Garrison',
+#     '2': 'Lt. Col. Williams',
+#     '3': 'Maj. Spikes',
+#     '4': 'Capt. Ifan',
+#     'Answer': '2'
+#   },
+#   2: {
+#     'Question 2': 'What is our Group?',
+#     '1': '338th',
+#     '2': '336th',
+#     '3': '960th',
+#     '4': '860th',
+#     'Answer': '4'
+#   }
+# }
+# def print_question(q):
+#   Q = unit_question[q]
+#   for i, j in Q.items():
+#     if not i == 'Answer':
+#       print(i + ': ' + j)
+#   return Q['Answer']
 
 
-def ask_question(q):
-  answer = print_question(q)
-  guess = input('-->')
-  if guess == answer:
-    print("That's Right!!!")
+# def ask_question(q):
+#   answer = print_question(q)
+#   guess = input('-->')
+#   if guess == answer:
+#     print("That's Right!!!")
 
 
 
@@ -81,10 +82,8 @@ def ask_question(q):
 
 
 def hangman():
-  
-  print()
   #here we set the secret. You can select any word to play with.
-  word = ("FLY")
+  word = ("FLY FIGHT")
 
   #creates an variable with an empty value
   guesses = ''
@@ -96,11 +95,13 @@ def hangman():
 
   #check if the turns are more than zero
   while turns > 0:
+    straight_line()
 
     # make a counter that starts with zero
     failed = 0
 
     # for every character in secret_word
+    print(f'\nTurns left: {turns}\nLetters Guessed: {guesses}')
     for char in word:
 
       # see if the character is in the players guess
@@ -108,8 +109,8 @@ def hangman():
 
         # print then out the character
         print(char, end=""),
-      # elif char == ' ':
-      #   print('\n')
+      elif char == ' ':
+        print('\n')
       else:
 
         # if not found, print a dash
@@ -123,7 +124,7 @@ def hangman():
 
     # print You Won
     if failed == 0:
-      print("You won")
+      press_enter()
       return True
       # exit the script
       break
@@ -142,14 +143,14 @@ def hangman():
       # print wrong
       print("Wrong")
 
-      # how many turns are left
-      print("You have", +turns, 'more guesses')
+      # # how many turns are left
+      # print("You have", +turns, 'more guesses')
 
       # if the turns are equal to zero
       if turns == 0:
 
         # print "You Lose"
-        print("You Lose")
+        press_enter()
         return False
 
 
@@ -163,11 +164,15 @@ soldier='''
         ___ ____/:     :\____ ___
       .'   `.-===-\   /-===-.`   '.
      /      .-"""""-.-"""""-.      \\
-    /'           A R M Y           '\\
-  .'  ' .:    o   -=:=-   o    :. '  `.
-  (.'   /'. '-.....-'-.....-' .'\   '.)
-  /' ._/   ".     --:--     ."   \_. '\\
- |  .'|      ".  ---:---  ."      |'.  |
- |  : |       |  ---:---  |       | :  |
-  \ : |       |_____._____|  jps  | : /'''
+    /'           A R M Y           '\\'''
+ 
 
+soldier_lose='''
+       .---.
+  ___ /_____\\
+ /\.-`( '.' )
+/ /    \_-_/_
+\ `-.-"`'V'//-.
+ `.__,   |// , \\
+     |Ll //Ll|\ \\
+     |__//   | \_\\'''

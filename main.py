@@ -1,6 +1,5 @@
 from challenge import *
 
-
 def greeting():
   prCyan("―" * 30)
   print(" * " * 10)
@@ -30,15 +29,19 @@ def pick_name():
     pick_name()
 
 
-def cross_roads(left, right, forward, back):
+def cross_roads_4(left, right, forward, back):
   straight_line()
   print(f"1.Left\n2.Right\n3.Forward\n4.Back")
-  print("1.Left", left, '\n2.Right', str(right), '\n3.Forward', forward,
-        '\n4.Back', back)
 
+
+def cross_roads_2(one_direction,one_method, two_direction, two_method):
+  straight_line()
+  print(f"1. {one_direction} \n2. {two_direction}")
   choice = input("Where do you want to go?\n")
+  if choice == '1':
+    one_method()
   if choice == '2':
-    right()
+    two_method()
   else:
     print("didn't work" + choice)
 
@@ -61,7 +64,6 @@ def car_to_door():
 # ------------------------------------------------------#
 
 
-
 def dumpster():
   straight_line()
   if not inventory["key"] == 0:
@@ -69,21 +71,38 @@ def dumpster():
     press_enter()
     car_to_door
   else:
-    print('You go right, looking for a way into the building.\nAs you near the dumpsters...')
+    print(
+      'You go right, looking for a way into the building.\nAs you near the dumpsters...'
+    )
     press_enter()
-    print(soldier,'\nAN ANGRY SOLDIER JUMPS OUT OF THE DUMPSTER!!\n\t"Oh look, a lost Airman"\n\t"I stole the key to your precious unit."\n\t"Play me in hangman for the key or else!"\n\t"You have 5 guesses (HINT:Slogan)"')
+    print(
+      soldier,
+      '\nAN ANGRY SOLDIER JUMPS OUT OF THE DUMPSTER!!\n\t"Oh look, a lost Airman"\n\t"I stole the key to your precious unit."\n\t"Play me in hangman for the key or else!"\n\t"You have 5 guesses (HINT:Slogan)"'
+    )
     press_enter()
-    t=hangman()
-    print(t)
-    
-    
-    
+    t = hangman()
+    if t == True:
+      add_item('key', 1)
+      straight_line()
+      
+      print(soldier_lose,
+        '\n\t"Ahhh. You guessed it."\n\t"HERE!!!"\nSoldier gave you the key\nHead back to building.'
+      )
+      press_enter()
+      car_to_door()
+    else:
+      straight_line()
+      print(
+        '"\tHahaha You guessed wrong."\nThe soldier disappeared with the key.\nFind another way in.'
+      )
+      press_enter()
+      # ATC()
+
+
 if __name__ == '__main__':
   # greeting()
   # play.name = pick_name()
   # car_to_door()
-  # cross_roads("35ATC", dumpster, "5", "y")
-  dumpster()
-  
+  cross_roads_2("Left",pick_name, "Right",dumpster)
+
   # db_ask_question("q1")
-  
