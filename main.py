@@ -76,7 +76,7 @@ def dumpster():
     )
     press_enter()
     print(
-      soldier,
+      soldier_ascii,
       '\nAN ANGRY SOLDIER JUMPS OUT OF THE DUMPSTER!!\n\t"Oh look, a lost Airman"\n\t"I stole the key to your precious unit."\n\t"Play me in hangman for the key or else!"\n\t"You have 5 guesses (HINT:Slogan)"'
     )
     press_enter()
@@ -103,6 +103,6 @@ if __name__ == '__main__':
   # greeting()
   # play.name = pick_name()
   # car_to_door()
-  cross_roads_2("Left",pick_name, "Right",dumpster)
+  # cross_roads_2("Left",pick_name, "Right",dumpster)
 
-  # db_ask_question("q1")
+  db_ask_question("q1")

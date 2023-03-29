@@ -1,5 +1,6 @@
 from replit import db
 from Airman import *
+from ascii import *
 
 
 # ____
@@ -83,7 +84,7 @@ def db_ask_question(q):
 
 def hangman():
   #here we set the secret. You can select any word to play with.
-  word = ("FLY FIGHT")
+  word = ("FLY FIGHT WIN")
 
   #creates an variable with an empty value
   guesses = ''
@@ -101,7 +102,7 @@ def hangman():
     failed = 0
 
     # for every character in secret_word
-    print(f'\nTurns left: {turns}\nLetters Guessed: {guesses}')
+    print(f'\nTurns left: {turns}\nLetters Guessed: {guesses}\n________________')
     for char in word:
 
       # see if the character is in the players guess
@@ -115,7 +116,7 @@ def hangman():
 
         # if not found, print a dash
 
-        print("_", end="")
+        print("*", end="")
 
         # and increase the failed counter with one
         failed += 1
@@ -154,25 +155,25 @@ def hangman():
         return False
 
 
-soldier='''                 
-                 ,#####,
-                 #_   _#
-                 |a` `a|
-                 |  u  |
-                 \  =  /
-                 |\___/|
-        ___ ____/:     :\____ ___
-      .'   `.-===-\   /-===-.`   '.
-     /      .-"""""-.-"""""-.      \\
-    /'           A R M Y           '\\'''
+# soldier='''                 
+#                  ,#####,
+#                  #_   _#
+#                  |a` `a|
+#                  |  u  |
+#                  \  =  /
+#                  |\___/|
+#         ___ ____/:     :\____ ___
+#       .'   `.-===-\   /-===-.`   '.
+#      /      .-"""""-.-"""""-.      \\
+#     /'           A R M Y           '\\'''
  
 
-soldier_lose='''
-       .---.
-  ___ /_____\\
- /\.-`( '.' )
-/ /    \_-_/_
-\ `-.-"`'V'//-.
- `.__,   |// , \\
-     |Ll //Ll|\ \\
-     |__//   | \_\\'''
+# soldier_lose='''
+#        .---.
+#   ___ /_____\\
+#  /\.-`( '.' )
+# / /    \_-_/_
+# \ `-.-"`'V'//-.
+#  `.__,   |// , \\
+#      |Ll //Ll|\ \\
+#      |__//   | \_\\'''
