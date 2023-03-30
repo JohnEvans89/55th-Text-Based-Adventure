@@ -10,7 +10,7 @@ def greeting():
         SQUADRON
         ''')
   prRed(
-    "This will be an adventure game. See if you can make it to \nthe bay in time for morning formation.\nBut don't run into the Commander or you will be ELS'd\n\n!!!ALSO WATCH OUT FOR SOLDIERS!!!"
+    "This will be an adventure game. See if you can make it to \nthe bay in time for morning formation.\nBut don't run into the Commander or you will be Discharged\n\n!!!ALSO WATCH OUT FOR SOLDIERS!!!"
   )
   prCyan("―" * 30)
   print(" * " * 10)
@@ -48,6 +48,7 @@ def cross_roads_2(one_direction,one_method, two_direction, two_method):
 
 def car_to_door():
   straight_line()
+  print(basicbuilding_ascii)
   if inventory["key"] == 0:
     print(
       'You walk from your car and notice\nthat the parking lot is already full.\nYou walk up to the doors of the building and try to open the door.\n\nOH NO!!!!!\nTHE DOOR IS LOCKED!!!!!\n\nYour phone rings, it\'s MSgt. Osbourne:\n\t"Airman',
@@ -102,7 +103,5 @@ def dumpster():
 if __name__ == '__main__':
   # greeting()
   # play.name = pick_name()
-  # car_to_door()
+  car_to_door()
   # cross_roads_2("Left",pick_name, "Right",dumpster)
-
-  db_ask_question("q1")

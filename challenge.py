@@ -44,7 +44,6 @@ def db_ask_question(q):
 # Local Dict
 # ____
 
-
 # unit_question = {
 #   1: {
 #     'Question 1': "Who is the 55th CBCS Commander",
@@ -70,16 +69,11 @@ def db_ask_question(q):
 #       print(i + ': ' + j)
 #   return Q['Answer']
 
-
 # def ask_question(q):
 #   answer = print_question(q)
 #   guess = input('-->')
 #   if guess == answer:
 #     print("That's Right!!!")
-
-
-
-
 
 
 def hangman():
@@ -102,7 +96,8 @@ def hangman():
     failed = 0
 
     # for every character in secret_word
-    print(f'\nTurns left: {turns}\nLetters Guessed: {guesses}\n________________')
+    print(
+      f'\nTurns left: {turns}\nLetters Guessed: {guesses}\n________________')
     for char in word:
 
       # see if the character is in the players guess
@@ -153,27 +148,3 @@ def hangman():
         # print "You Lose"
         press_enter()
         return False
-
-
-# soldier='''                 
-#                  ,#####,
-#                  #_   _#
-#                  |a` `a|
-#                  |  u  |
-#                  \  =  /
-#                  |\___/|
-#         ___ ____/:     :\____ ___
-#       .'   `.-===-\   /-===-.`   '.
-#      /      .-"""""-.-"""""-.      \\
-#     /'           A R M Y           '\\'''
- 
-
-# soldier_lose='''
-#        .---.
-#   ___ /_____\\
-#  /\.-`( '.' )
-# / /    \_-_/_
-# \ `-.-"`'V'//-.
-#  `.__,   |// , \\
-#      |Ll //Ll|\ \\
-#      |__//   | \_\\'''
