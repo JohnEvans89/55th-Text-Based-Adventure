@@ -10,7 +10,7 @@ def RPS_battle(comp, user):
   if comp=="Rock\n"+art.rock_ascii:
     print("works")
 
-
+# This is probably not needed. The main functionalitty is just the random.choice
 def computer_player():
   comp_choice = random.choice(RPS_art)
   # print(comp_choice)
