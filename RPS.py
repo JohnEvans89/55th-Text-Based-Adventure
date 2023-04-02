@@ -1,11 +1,16 @@
 import random
 import ascii as art
 
+
+
 RPS_art = [art.rock_ascii, art.paper_ascii, art.scissors_ascii]
 
+def RPS_player_choice():
+  player_choice=input("Make Your Choice: \n\t1. Rock\n\t2. Paper\n\t3. Scissors\n--->")
 
 # RPS game for the ATC "enemy"
 def RPS_battle(comp, user):
+  comp_choice = random.choice(RPS_art)
   print(comp, "\n\t~~\n\tVS\n\t~~\n", user)
   if comp=="Rock\n"+art.rock_ascii:
     print("works")
@@ -27,4 +32,10 @@ def computer_player():
 
 # RPS_battle(art.rock_ascii,art.scissors_asci)
 
-RPS_battle(computer_player(),"computer_player()")
+# RPS_battle(computer_player(),"computer_player()")
+RPS_player_choice()
+def ATC_53():
+  print("*** insert ascii ***")
+  print("")
+
+print(art.ATC_ascii,art.paper_ascii_2)
