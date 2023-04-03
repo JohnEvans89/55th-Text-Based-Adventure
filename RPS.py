@@ -1,41 +1,52 @@
 import random
 import ascii as art
 
+RPS_art = [art.rock_ascii_2, art.paper_ascii_2, art.scissors_ascii_2]
 
-
-RPS_art = [art.rock_ascii, art.paper_ascii, art.scissors_ascii]
 
 def RPS_player_choice():
-  player_choice=input("Make Your Choice: \n\t1. Rock\n\t2. Paper\n\t3. Scissors\n--->")
+  player_choice = input(
+    "Make Your Choice: \n\t1. Rock\n\t2. Paper\n\t3. Scissors\n--->")
+  if player_choice == '1':
+    return 'r'
+  elif player_choice == '2':
+    return 'p'
+  else:
+    return 's'
+
 
 # RPS game for the ATC "enemy"
-def RPS_battle(comp, user):
+def RPS_battle(user):
+  user_choice = ''
   comp_choice = random.choice(RPS_art)
-  print(comp, "\n\t~~\n\tVS\n\t~~\n", user)
-  if comp=="Rock\n"+art.rock_ascii:
-    print("works")
-
-# This is probably not needed. The main functionalitty is just the random.choice
-def computer_player():
-  comp_choice = random.choice(RPS_art)
-  # print(comp_choice)
-  if comp_choice == art.rock_ascii:
-    comp_choice="Rock\n"+comp_choice
-  elif comp_choice == art.paper_ascii:
-    comp_choice="Paper\n"+comp_choice
-  elif comp_choice == art.scissors_ascii:
-    comp_choice="Scissors\n"+comp_choice
+  if user == 'r':
+    user_choice = art.rock_ascii_2
+  elif user == 'p':
+    user_choice = art.paper_ascii_2
   else:
-    print("Something broke!!!")
-  return comp_choice
+    user_choice = art.scissors_ascii_2
+    
+  print(comp_choice, "\n\t~~\n\tVS\n\t~~\n", user_choice)
+
 
 
 # RPS_battle(art.rock_ascii,art.scissors_asci)
 
-# RPS_battle(computer_player(),"computer_player()")
-RPS_player_choice()
-def ATC_53():
-  print("*** insert ascii ***")
-  print("")
 
-print(art.ATC_ascii,art.paper_ascii_2)
+
+def ATC_53():
+  print(art.ATC_ascii)
+  print(
+    'Looking for an entrance to the building...\nAn ATC Airman appears\n\t"To get to the unit, you\'ll have to beat me...at Rock Paper Scissors!"'
+  )
+
+
+# print(art.ATC_ascii,art.paper_ascii_2)
+# ATC_53()
+# print(random.choice(RPS_art))
+n=5
+while n>0:
+  print(n)
+  te=RPS_player_choice()
+  RPS_battle(te)
+  n-=1
