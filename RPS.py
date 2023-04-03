@@ -1,6 +1,6 @@
 import random
 import ascii as art
-
+import os
 RPS_art = [art.rock_ascii_2, art.paper_ascii_2, art.scissors_ascii_2]
 
 
@@ -14,15 +14,18 @@ def RPS_player_choice():
 
 # RPS game for the ATC "enemy"
 def RPS_battle():
-  user=RPS_player_choice()
-  win_lose=user
-  user_choice = ''
+  user = RPS_player_choice()
   comp_choice = random.choice(RPS_art)
-  if user == 'r': user_choice = art.rock_ascii_2
-  elif user == 'p': user_choice = art.paper_ascii_2
-  else: user_choice = art.scissors_ascii_2
-  print(comp_choice, "\n\t~~\n\tVS\n\t~~\n", user_choice)
-  # if win_lose=='r' and 
+  print(user, "\n\t~~\n\tVS\n\t~~\n", comp_choice)
+  if user == comp_choice:
+    print("Draw")
+  elif (user==art.rock_ascii_2 and comp_choice==art.scissors_ascii_2) or (user==art.scissors_ascii_2 and comp_choice==art.paper_ascii_2) or (user==art.paper_ascii_2 and comp_choice==art.rock_ascii_2):
+    print("you win")
+  else:
+    print("lose")
+  
+
+
 def ATC_53():
   print(art.ATC_ascii)
   print(
@@ -35,6 +38,7 @@ def ATC_53():
 # print(random.choice(RPS_art))
 n = 5
 while n > 0:
-  print(n)
-  print(RPS_player_choice())
+  os.system("clear")
+  RPS_battle()
   n -= 1
+  enter=input('')
