@@ -1,8 +1,8 @@
 unit_question = {1: {'Question 1': "Who is the 55th CBCS Commander",
                      '1': 'Col. Garrison',
-                     '2': 'Lt. Col. Williams',
+                     '2': 'Col. Williams',
                      '3': 'Maj. Spikes',
-                     '4': 'Capt. Ifan',
+                     '4': 'Maj. Ifan',
                      'Answer': '2'},
                  2: {'Question 2': 'What is our Group?',
                      '1': '338th',
@@ -30,4 +30,4 @@ def ask_question(q):
 
 
 
-# ask_question(2)
+ask_question(2)
